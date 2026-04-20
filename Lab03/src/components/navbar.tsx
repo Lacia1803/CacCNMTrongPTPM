@@ -1,0 +1,59 @@
+import Link from "next/link";
+
+export default function Navbar() {
+  return (
+    <nav className="bg-white shadow-sm border-b">
+      <div className="max-w-5xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="text-xl font-bold text-blue-600">
+            Phùng Võ Quốc Hiển
+          </Link>
+          <div className="flex gap-5 flex-wrap text-sm">
+            <Link
+              href="/"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Trang chủ
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Giới thiệu
+            </Link>
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/projects"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Dự án
+            </Link>
+            <Link
+              href="/countries"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
+              🌍 Thế giới
+            </Link>
+            <Link
+              href="/guestbook"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Lưu bút
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              Liên hệ
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
