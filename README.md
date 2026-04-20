@@ -60,10 +60,111 @@ Sau đó mở trình duyệt tại địa chỉ được hiển thị trong term
 
 ```text
 .
+├── README.md
 ├── Lab02/
-│   └── README.md
+│   ├── README.md
+│   ├── next-env.d.ts
+│   ├── next.config.ts
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── tailwind.config.ts
+│   ├── tsconfig.json
+│   └── src/
+│       ├── app/
+│       │   ├── about/
+│       │   │   └── page.tsx
+│       │   ├── blog/
+│       │   │   ├── [slug]/
+│       │   │   │   ├── loading.tsx
+│       │   │   │   ├── not-found.tsx
+│       │   │   │   └── page.tsx
+│       │   │   ├── error.tsx
+│       │   │   ├── layout.tsx
+│       │   │   ├── loading.tsx
+│       │   │   └── page.tsx
+│       │   ├── contact/
+│       │   │   └── page.tsx
+│       │   ├── error.tsx
+│       │   ├── globals.css
+│       │   ├── layout.tsx
+│       │   ├── not-found.tsx
+│       │   ├── page.tsx
+│       │   ├── projects/
+│       │   │   └── page.tsx
+│       │   └── skills/
+│       │       └── page.tsx
+│       ├── components/
+│       │   ├── copy-button.tsx
+│       │   ├── counter.tsx
+│       │   ├── footer.tsx
+│       │   ├── like-button.tsx
+│       │   ├── navbar.tsx
+│       │   └── theme-toggle.tsx
+│       └── data/
+│           └── posts.ts
 └── Lab03/
-    └── README.md
+    ├── README.md
+    ├── next-env.d.ts
+    ├── next.config.ts
+    ├── package.json
+    ├── postcss.config.mjs
+    ├── tailwind.config.ts
+    ├── tsconfig.json
+    └── src/
+        ├── app/
+        │   ├── about/
+        │   │   └── page.tsx
+        │   ├── api/
+        │   │   └── guestbook/
+        │   │       ├── [id]/
+        │   │       │   └── route.ts
+        │   │       └── route.ts
+        │   ├── blog/
+        │   │   ├── [id]/
+        │   │   │   ├── loading.tsx
+        │   │   │   ├── not-found.tsx
+        │   │   │   └── page.tsx
+        │   │   ├── error.tsx
+        │   │   ├── layout.tsx
+        │   │   ├── loading.tsx
+        │   │   └── page.tsx
+        │   ├── contact/
+        │   │   ├── actions.ts
+        │   │   └── page.tsx
+        │   ├── countries/
+        │   │   ├── [code]/
+        │   │   │   ├── loading.tsx
+        │   │   │   ├── not-found.tsx
+        │   │   │   └── page.tsx
+        │   │   ├── loading.tsx
+        │   │   └── page.tsx
+        │   ├── error.tsx
+        │   ├── globals.css
+        │   ├── guestbook/
+        │   │   ├── actions.ts
+        │   │   └── page.tsx
+        │   ├── layout.tsx
+        │   ├── not-found.tsx
+        │   ├── page.tsx
+        │   ├── projects/
+        │   │   └── page.tsx
+        │   └── skills/
+        │       └── page.tsx
+        ├── components/
+        │   ├── copy-button.tsx
+        │   ├── counter.tsx
+        │   ├── delete-button.tsx
+        │   ├── footer.tsx
+        │   ├── guestbook-form.tsx
+        │   ├── like-button.tsx
+        │   ├── navbar.tsx
+        │   └── theme-toggle.tsx
+        ├── data/
+        │   ├── guestbook.ts
+        │   └── posts.ts
+        └── types/
+            ├── country.ts
+            └── post.ts
 ```
 
 ## Ghi chú
