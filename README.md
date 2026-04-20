@@ -1,85 +1,72 @@
-# CTK46 — Bài Thực Hành 02
+# CTK46 - Các công nghệ mới trong Phát triển phần mềm
 
-**Môn học:** Các công nghệ mới trong phát triển phần mềm  
-**Sinh viên:** Phùng Võ Quốc Hiển — MSSV: 2212364  
-**Lớp:** CTK46-PM — Khoa Công nghệ Thông tin, Đại học Đà Lạt  
+**Môn học:** Các công nghệ mới trong Phát triển phần mềm
+**Giảng viên:** Nguyễn Trọng Hiếu
+**Sinh viên:** Phùng Võ Quốc Hiển - MSSV: 2212364
+**Lớp:** CTK46-PM - Khoa Công nghệ Thông tin, Đại học Đà Lạt
 **GitHub:** [Lacia1803](https://github.com/Lacia1803)
 
 ---
 
-## Nội dung bài thực hành
+## Giới thiệu
 
-Website Portfolio/Blog cá nhân xây dựng với **Next.JS 15 App Router** và **Tailwind CSS**.
+Repository này tổng hợp các bài thực hành của môn học, hiện gồm:
 
-### Các trang đã xây dựng
+- [Lab02](Lab02/README.md): Xây dựng website Portfolio/Blog cá nhân với Next.js 15 App Router và Tailwind CSS.
+- [Lab03](Lab03/README.md): Mở rộng ứng dụng với Server Actions, API Routes, Zod Validation, Guestbook và bài tập bổ sung về Countries.
 
-| URL            | Mô tả                                  |
-| -------------- | -------------------------------------- |
-| `/`            | Trang chủ — Hero section, kỹ năng, CTA |
-| `/about`       | Giới thiệu bản thân chi tiết           |
-| `/blog`        | Danh sách bài viết (5 bài)             |
-| `/blog/[slug]` | Chi tiết bài viết — Dynamic Route      |
-| `/projects`    | Danh sách 5 dự án đã thực hiện         |
-| `/skills`      | Kỹ năng + Demo Client Components       |
-| `/contact`     | Thông tin liên hệ                      |
+Mỗi bài lab đều có README riêng mô tả chi tiết tính năng, cấu trúc thư mục và cách chạy.
 
-### Kiến thức áp dụng
+## Mục tiêu học phần
 
-- ✅ App Router & file-based routing
-- ✅ Nested Layouts (Root Layout + Blog Layout với sidebar)
-- ✅ Dynamic Routes `[slug]` với `generateStaticParams`
-- ✅ `loading.tsx` — Skeleton loading
-- ✅ `error.tsx` — Error Boundary (phải là Client Component)
-- ✅ `not-found.tsx` — Trang 404 tùy chỉnh (blog + toàn cục)
-- ✅ Tailwind CSS Responsive (`grid-cols-1 md:grid-cols-2 lg:grid-cols-...`)
-- ✅ Server Components (mặc định)
-- ✅ Client Components: `LikeButton`, `Counter`, `ThemeToggle`, `CopyButton`
+- Làm quen với Next.js App Router và mô hình Server Components / Client Components.
+- Thực hành định tuyến file-based, nested layout, dynamic route và các trang xử lý lỗi.
+- Ứng dụng API Routes, Server Actions và validation phía server với Zod.
+- Tích hợp dữ liệu từ API bên ngoài và xây dựng giao diện responsive.
 
----
+## Công nghệ sử dụng
+
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- Zod
+- JSONPlaceholder API
+- REST Countries API
 
 ## Hướng dẫn chạy
 
-```bash
-# Cài đặt dependencies
-npm install
+Do mỗi bài lab có thư mục và cấu hình riêng, hãy chạy trong đúng thư mục tương ứng.
 
-# Chạy development server
+### Lab 02
+
+```bash
+cd Lab02
+npm install
 npm run dev
 ```
 
-Truy cập: [http://localhost:3000](http://localhost:3000)
+### Lab 03
 
----
-
-## Cấu trúc thư mục
-
+```bash
+cd Lab03
+npm install
+npm run dev
 ```
-src/
-├── app/
-│   ├── layout.tsx          ← Root layout (Navbar + Footer)
-│   ├── page.tsx            ← Trang chủ (/)
-│   ├── not-found.tsx       ← 404 toàn cục
-│   ├── error.tsx           ← Error toàn cục (Client Component)
-│   ├── about/page.tsx      ← /about
-│   ├── contact/page.tsx    ← /contact
-│   ├── projects/page.tsx   ← /projects
-│   ├── skills/page.tsx     ← /skills
-│   └── blog/
-│       ├── layout.tsx      ← Blog layout (có sidebar)
-│       ├── page.tsx        ← /blog
-│       ├── loading.tsx     ← Skeleton loading
-│       ├── error.tsx       ← Error boundary
-│       └── [slug]/
-│           ├── page.tsx    ← /blog/:slug (Dynamic Route)
-│           ├── loading.tsx ← Skeleton cho bài viết
-│           └── not-found.tsx ← 404 cho bài viết
-├── components/
-│   ├── navbar.tsx          ← Navigation bar
-│   ├── footer.tsx          ← Footer
-│   ├── like-button.tsx     ← Client Component
-│   ├── counter.tsx         ← Client Component
-│   ├── theme-toggle.tsx    ← Client Component
-│   └── copy-button.tsx     ← Client Component
-└── data/
-    └── posts.ts            ← Mock data bài viết (5 bài)
+
+Sau đó mở trình duyệt tại địa chỉ được hiển thị trong terminal, mặc định là `http://localhost:3000`.
+
+## Cấu trúc tổng quan
+
+```text
+.
+├── Lab02/
+│   └── README.md
+└── Lab03/
+    └── README.md
 ```
+
+## Ghi chú
+
+- Các README bên trong từng lab chứa mô tả chi tiết hơn về tính năng và cấu trúc thư mục.
+- Nếu cổng `3000` đang bị chiếm, Next.js sẽ tự động chọn cổng tiếp theo.
